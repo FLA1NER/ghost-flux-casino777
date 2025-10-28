@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ghost FluX Casino</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Главный экран -->
+        <div id="mainScreen" class="screen active">
+            <div class="header">
+                <h1 class="neon-text">👻 Ghost FluX</h1>
+                <div class="balance">
+                    <span id="balance">0</span> ⭐
+                </div>
+            </div>
+            
+            <div class="content">
+                <div class="welcome-message">
+                    <p>Добро пожаловать в самое стильное казино Telegram!</p>
+                </div>
+                
+                <div class="buttons-container">
+                    <button class="neon-button" onclick="showScreen('rouletteScreen')">
+                        🎰 Играть в рулетку
+                    </button>
+                    <button class="neon-button" onclick="showScreen('dailyScreen')">
+                        🎁 Ежедневный бонус
+                    </button>
+                    <button class="neon-button" onclick="showChannel()">
+                        📢 Наш канал
+                    </button>
+                    <button class="neon-button" onclick="showScreen('buyScreen')">
+                        ⭐ Купить звезды
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Экран рулетки -->
+        <div id="rouletteScreen" class="screen">
+            <div class="header">
+                <button class="back-button" onclick="showScreen('mainScreen')">← Назад</button>
+                <h2 class="neon-text">🎰 Рулетка</h2>
+            </div>
+            
+            <div class="roulette-container">
+                <div class="roulette-wheel" id="rouletteWheel">
+                    <div class="roulette-item" data-value="15">Мишка</div>
+                    <div class="roulette-item" data-value="15">Сердечко</div>
+                    <div class="roulette-item" data-value="50">Ракета</div>
+                    <div class="roulette-item" data-value="50">Торт</div>
+                    <div class="roulette-item" data-value="100">Кубок</div>
+                    <div class="roulette-item" data-value="100">Кольцо</div>
+                </div>
+                
+                <div class="spin-controls">
+                    <div class="cost">Стоимость спина: 50⭐</div>
+                    <button class="neon-button spin-button" id="spinButton" onclick="spinRoulette()">
+                        Крутить за 50⭐
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Экран ежедневного бонуса -->
+        <div id="dailyScreen" class="screen">
+            <div class="header">
+                <button class="back-button" onclick="showScreen('mainScreen')">← Назад</button>
+                <h2 class="neon-text">🎁 Ежедневный бонус</h2>
+            </div>
+            
+            <div class="daily-container">
+                <div class="bonus-box" id="bonusBox" onclick="openDailyBonus()">
+                    <div class="bonus-text">Нажми чтобы открыть</div>
+                </div>
+                <div id="bonusResult" class="bonus-result"></div>
+            </div>
+        </div>
+
+        <!-- Экран покупки звезд -->
+        <div id="buyScreen" class="screen">
+            <div class="header">
+                <button class="back-button" onclick="showScreen('mainScreen')">← Назад</button>
+                <h2 class="neon-text">⭐ Покупка звезд</h2>
+            </div>
+            
+            <div class="prices-container">
+                <div class="price-item">
+                    <div class="stars">50 ⭐</div>
+                    <div class="price">85 руб</div>
+                    <button class="neon-button small" onclick="contactAdmin(50)">Купить</button>
+                </div>
+                <div class="price-item">
+                    <div class="stars">100 ⭐</div>
+                    <div class="price">160 руб</div>
+                    <button class="neon-button small" onclick="contactAdmin(100)">Купить</button>
+                </div>
+                <div class="price-item">
+                    <div class="stars">250 ⭐</div>
+                    <div class="price">400 руб</div>
+                    <button class="neon-button small" onclick="contactAdmin(250)">Купить</button>
+                </div>
+            </div>
+            
+            <div class="contact-info">
+                <p>Свяжитесь с администратором для покупки:</p>
+                <p class="admin-contact">@KXKXKXKXKXKXKXKXKXKXK</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

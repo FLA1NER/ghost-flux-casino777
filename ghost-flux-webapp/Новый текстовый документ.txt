@@ -1,0 +1,6 @@
+{
+    "url": "https://yourdomain.com/webapp/index.html",
+    "name": "Ghost FluX Casino",
+    "icon_url": "https://yourdomain.com/icon.png",
+    "description": "Самое стильное казино в Telegram с неоновым дизайном!"
+}
